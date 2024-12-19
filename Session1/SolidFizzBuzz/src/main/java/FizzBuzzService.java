@@ -1,0 +1,26 @@
+import logic.Check.Checker;
+
+public class FizzBuzzService {
+    private final Checker checkers[];
+
+    public FizzBuzzService(Checker[] checkers) {
+        this.checkers = checkers;
+    }
+
+    public void executeFizzBuzz(int limit) {
+        for(int i=1; i<= limit; i++) {
+            boolean found = foundFizzBuzz(i);
+            if(!found) System.out.println(i);
+        }
+    }
+
+    private boolean foundFizzBuzz(int i) {
+        for(Checker checker : checkers) {
+            if (checker.check(i)) {
+                System.out.println(checker.getKeyWord());
+                return true;
+            }
+        }
+        return false;
+    }
+}
