@@ -14,9 +14,9 @@ public class FizzBuzzService {
         }
     }
 
-    private boolean foundFizzBuzz(int i) {
+    private boolean foundFizzBuzz(int number) {
         for(Checker checker : checkers) {
-            if (checker.check(i)) {
+            if (checker.check(number)) {
                 System.out.println(checker.getKeyWord());
                 return true;
             }

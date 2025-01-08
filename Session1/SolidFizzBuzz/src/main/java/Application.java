@@ -1,15 +1,13 @@
-import logic.Check.Checker;
-import logic.Check.ModuloFiveChecker;
-import logic.Check.ModuloThreeAndFiceChecker;
-import logic.Check.ModuloThreeChecker;
+import logic.Check.*;
 
 public class Application {
     public static void main(String[] args) {
         Checker checkers[] = {
-                new ModuloThreeAndFiceChecker(),
-                new ModuloFiveChecker(), new ModuloThreeChecker()
+                new ModuloThreeAndFiveChecker(),
+                new ModuloFiveChecker(), new ModuloThreeChecker(),
+                new ModuloSevenChecker()
         };
         FizzBuzzService fizzBuzzService = new FizzBuzzService(checkers);
-        fizzBuzzService.executeFizzBuzz(100);
+        fizzBuzzService.executeFizzBuzz(105);
     }
 }
