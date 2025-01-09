@@ -19,8 +19,5 @@ public class Application {
         ApplicationRunner applicationRunner = new ApplicationRunner(checker);
         applicationRunner.run(100);
 
-
-
-
     }
 }
