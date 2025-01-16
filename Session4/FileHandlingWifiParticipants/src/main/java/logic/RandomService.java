@@ -15,6 +15,7 @@ public class RandomService {
     }
 
     public String getRandomName(List<String> names) {
+        if (names.size() == 0) return "";
         int index = getRandomNumber(0, names.size());
         return names.get(index);
     }
