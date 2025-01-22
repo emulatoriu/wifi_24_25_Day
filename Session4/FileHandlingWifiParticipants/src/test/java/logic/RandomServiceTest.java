@@ -25,6 +25,7 @@ class RandomServiceTest {
     void setUp() {
         MockitoAnnotations.openMocks(this);
     }
+
     @Test
     void getRandomName() {
         RandomService spyRandomService = spy(randomService);
