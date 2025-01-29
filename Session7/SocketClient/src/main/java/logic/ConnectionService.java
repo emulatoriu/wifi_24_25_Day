@@ -1,5 +1,7 @@
 package logic;
 
+import data.Constants;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,7 +23,7 @@ public class ConnectionService {
     public void connect() {
         String messageToSend = "";
         String messageReceived = "";
-        while(!messageReceived.equalsIgnoreCase("byebye")) {
+        while(!messageReceived.equalsIgnoreCase(Constants.END_OF_CONNECTION)) {
             messageToSend = userInputService.getUserInput();
             outgoing.println(messageToSend);
             try {

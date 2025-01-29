@@ -1,5 +1,7 @@
 package logic;
 
+import data.Constants;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +21,7 @@ public class ClientThread extends Thread {
     public void run() {
         try {
             String clientMessage = incoming.readLine();
-            while(clientMessage != null && !clientMessage.equalsIgnoreCase("byebye")) {
+            while(clientMessage != null && !clientMessage.equalsIgnoreCase(Constants.END_OF_CONNECTION)) {
                 System.out.println("Clientmessage: %s".formatted(clientMessage));
                 String messageToClient = userInputService.getUserInput();
                 outgoing.println(messageToClient);
