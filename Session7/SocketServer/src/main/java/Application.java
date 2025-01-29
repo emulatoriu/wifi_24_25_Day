@@ -10,7 +10,7 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
         UserInputService userInputService = new UserInputService(scanner);
         try {
-            ServerSocket serverSocket = new ServerSocket(45000);
+            ServerSocket serverSocket = new ServerSocket(22);
             ConnectionService connectionService = new ConnectionService(serverSocket, userInputService);
             connectionService.connect();
         } catch (IOException e) {

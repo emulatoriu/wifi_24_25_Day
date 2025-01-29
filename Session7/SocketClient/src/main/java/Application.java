@@ -12,7 +12,7 @@ public class Application {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         UserInputService userInputService = new UserInputService(scanner);
-        try(Socket clientSocket = new Socket("127.0.0.1", 45000);
+        try(Socket clientSocket = new Socket("6.tcp.ngrok.io:12390", 22);
             BufferedReader incoming = new BufferedReader(
                     new InputStreamReader(clientSocket.getInputStream()));
             PrintWriter outgoing = new PrintWriter(clientSocket.getOutputStream(), true);
