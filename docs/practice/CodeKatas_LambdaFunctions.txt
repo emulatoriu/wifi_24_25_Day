@@ -1,0 +1,17 @@
+- Erstelle ein funktionales Interface Calculator mit einer Methode calculate(int a, int b).
+Nutze Lambda-Ausdrücke, um verschiedene Berechnungen durchzuführen (Addition, Subtraktion, Multiplikation, Division).
+
+- Erstelle ein funktionales Interface NumberFilter mit einer Methode boolean test(int number).
+Nutze es, um verschiedene Zahlen aus einer Liste zu filtern (z. B. gerade Zahlen, alle Zahlen die durch 3 teilbar sind, ...).
+
+- Erstelle ein funktionales Interface StringTransformer mit einer Methode String transform(String input).
+Nutze es, um Strings zu transformieren (z. B. in Großbuchstaben umwandeln, spiegeln, erstes Zeichen extrahieren).
+
+- Erstelle eine Liste von Person-Objekten und nutze Predicate<Person>, um nach bestimmten Kriterien zu filtern (z. B. Alter größer als 30, bestimmte Hobbies).
+
+- Erstelle ein Consumer<String>, das einen Namen entgegennimmt und eine personalisierte Nachricht ausgibt.
+
+- Nutze Function<Integer, String>, um eine Liste von Zahlen in eine Liste von String-Beschreibungen zu konvertieren (dabei werden gerade Zahlen mit "gerade Zahl" und ungerade Zahlen mit "ungerade Zahl beschrieben").
+Bsp: List.of(1,2,3,4,5,6) => List.of("Ungerade Zahl", "Gerade Zahl", "Ungerade Zahl", "Gerade Zahl", "Ungerade Zahl", "Gerade Zahl")
+
+- Nutze Comparator<Person>, um Personen nach verschiedenen Kriterien zu sortieren (z. B. nach Alter, Name).
