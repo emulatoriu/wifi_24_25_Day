@@ -30,4 +30,10 @@ public class JokeController {
     Joke find(@PathVariable String id) {
         return jokeService.find(id);
     }
+
+    @DeleteMapping
+    @RequestMapping("delete/{id}")
+    boolean delete(@PathVariable String id) {
+        return jokeService.delete(id);
+    }
 }

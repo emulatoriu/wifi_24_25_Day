@@ -1,6 +1,7 @@
 package com.emulatoriu.ChuckNorrisJokeAPI.logic;
 
 import com.emulatoriu.ChuckNorrisJokeAPI.data.Joke;
+import com.emulatoriu.ChuckNorrisJokeAPI.logic.exception.JokeNotFoundException;
 import com.emulatoriu.ChuckNorrisJokeAPI.repository.JokeRepository;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,10 @@ public class JokeService {
         return findAll()
             .stream()
             .filter(joke -> joke.id().equals(id))
-            .findFirst().get();
+            .findFirst().orElseThrow(JokeNotFoundException::new);
+    }
+
+    public boolean delete(String id) {
+        return findAll().removeIf(joke -> joke.id().equals(id));
     }
 }
