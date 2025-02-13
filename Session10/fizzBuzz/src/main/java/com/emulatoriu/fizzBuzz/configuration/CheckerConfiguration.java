@@ -31,5 +31,11 @@ public class CheckerConfiguration {
           moduloThreeChecker(),
           moduloFiveChecker()
         );
+//same:
+//        return List.of(
+//                new ModuloThreeAndFiveChecker(),
+//                new ModuloThreeChecker(),
+//                new ModuloFiveChecker()
+//        );
     }
 }

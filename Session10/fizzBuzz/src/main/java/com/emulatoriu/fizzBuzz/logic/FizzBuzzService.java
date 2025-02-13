@@ -24,5 +24,18 @@ public class FizzBuzzService {
                             }
                             System.out.println(i);
                         }));
+        //same as:
+//        for(int i=0; i<limit; i++) {
+//            for(Checker checker : checkers) {
+//                if (checker.check(i)) {
+//                    System.out.println(checker.getAlias());
+//                    return;
+//                }
+//                System.out.println(i);
+//            }
+//        }
+        
     }
+
+
 }
